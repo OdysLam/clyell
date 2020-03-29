@@ -1,22 +1,18 @@
 # Site settings
-title: "gjuniioor"
-bye_message: "Thx!"
-baseurl: "/clyell/"
-url: "https://gjuniioor.github.io"
-disqus: gjuniioor
+title: "blog.py"
+bye_message: "Love responsibility. Say: It is my duty, and mine alone, to save the earth. If it is not saved, then I alone am to blame."
+baseurl: "/blog/"
+url: "https://odyslam.me"
+disqus: odyslam
 
 # Header settings
-nick: "gjuniioor"
+nick: "hi"
 mail:
-    domain: "protonmail"
-    ext: "ch"
+    domain: "odyslam"
+    ext: "me"
 source_code:
     server: "github.com"
-    nick: "gjuniioor"
-blog:
-    server: "wordpress.com"
-    nick: "gjuniioor"
-fingerprint_key: "5E12 9ABC C2A9 564B C048  2DF9 D327 0D10 BC71 CF75"
+    nick: "Odyslam"
 
 # Build settings
 markdown: kramdown
