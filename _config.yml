@@ -17,4 +17,4 @@ source_code:
 # Build settings
 markdown: kramdown
 permalink: /:title/
-exclude: ["balena_token", "deploy.sh"]
+exclude: ["balena_token", "deploy.sh", "README.MD"]
