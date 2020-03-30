@@ -1,5 +1,6 @@
 ---
 layout: page
+comments: true
 ---
 
 <div class="post">
@@ -10,7 +11,7 @@ layout: page
         {% if page.author %} • {{ page.author }}{% endif %}
         {% if page.meta %} • {{ page.meta }}{% endif %}
         •
-        {% for category in page.tags %}<span><a href="{{ site.baseurl }}category/#{{ category }}" class="reserved">{{ category }}</a>{% if forloop.last != true %},{% endif %}</span>{% endfor %}
+        {% for category in page.tags %}<span><a href="{{ site.baseurl }}/category/#{{ category }}" class="reserved">{{ category }}</a>{% if forloop.last != true %},{% endif %}</span>{% endfor %}
     </p>
   </header>
 
@@ -19,9 +20,9 @@ layout: page
   </article>
 
 	<p class="feed-recomendation">
-		Gostou do post? Assina o <a href="{{ site.baseurl }}feed/">feed</a> e seja feliz!!
+		If you enjoyed this blog post, leave a comment here. You can't imagine how much I appreciate your feedback.
 	</p>
 
   {% include disqus.html %}
-
+  <script id="dsq-count-scr" src="//odyslam-me.disqus.com/count.js" async></script>
 </div>

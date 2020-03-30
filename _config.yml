@@ -1,10 +1,10 @@
 # Site settings
 title: "blog.py"
 bye_message: "Love responsibility. Say: It is my duty, and mine alone, to save the earth. If it is not saved, then I alone am to blame."
-baseurl: "/blog/"
 url: "https://odyslam.me"
-disqus: odyslam
-
+disqus: odyslam-me
+baseurl: "/blog"
+future: true
 # Header settings
 nick: "hi"
 mail:
@@ -16,4 +16,5 @@ source_code:
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:title/
+permalink: /:title/
+exclude: ["balena_token", "deploy.sh"]
