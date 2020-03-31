@@ -1,4 +1,6 @@
-Repository to run `jekyll build` and build the blog part of my website. 
+[Jekyll](https://jekyllrb.com/) is a blog-aware static site generator.
+
+In this repository, I run `jekyll build` and build the blog part of my website. 
 
 The website is hosted on a [balena](https://balena.io) powered Raspberry pi 4, thus when I build the blog, I push to github and then connect to the server (Rpi4) to fetch the new version.
 
