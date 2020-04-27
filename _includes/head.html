@@ -19,9 +19,6 @@
     {% include analytics.html %}
 
     <link rel="shortcut icon" href="{{ site.baseurl }}/images/aperture.ico">
-
-    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="{{ site.baseurl }}/feed/"> 
-
     <!-- Social tags  -->
     <meta property="og:title"
     content="{% if page.title %}
@@ -92,5 +89,5 @@
   <meta name="twitter:image" content="https://i.imgur.com/cs9F8iJ.png" />
 
 {% endif %}
-
+{% seo %}
 </head>

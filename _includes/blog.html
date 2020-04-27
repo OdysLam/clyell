@@ -1,6 +1,7 @@
 <div style="width:100%;text-align:right;">
-    <a href="{{ site.baseurl }}/category/" title="Category List">Category List</a>
-    
+    {% if page.title != "Tags list" %}
+    <a href="{{ site.baseurl }}/category/" title="Tags List">Tags List</a>
+    {% endif %}
 <br>
 <br>
 <br>

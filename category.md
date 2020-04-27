@@ -1,12 +1,8 @@
 ---
 layout: posts
-title: "Category List"
+title: "Tags list"
 permalink: /category/
 ---
-
-<header>
-    <h1>Category List</h1>
-</header>
 
 <ul class="tag-box inline">
 {% assign list = site.tags | sort %}

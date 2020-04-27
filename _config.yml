@@ -18,3 +18,8 @@ source_code:
 markdown: kramdown
 permalink: /:title/
 exclude: ["balena_token", "deploy.sh", "README.MD"]
+
+plugins:
+     - jekyll-sitemap
+     - jekyll-seo-tag
+
