@@ -11,7 +11,7 @@ tags:
     - balena
     - technology
     - nginx
-excerpt: "How to host your website at home with a Raspberry pi"
+excerpt: "A complete guide on how to host your website at home with a Raspberry pi"
 image: https://i.imgur.com/Zd3GZX7.jpg
 vertical: iot
 ---
@@ -33,7 +33,7 @@ If you are familiar with the relevant terms (*IP, Domain Name*, etc.), go ahead 
   - [Domain](#domain)
     - [What's an IP](#whats-an-ip)
     - [But what it has to do with domains?](#but-what-it-has-to-do-with-domains)
-    - [Dynamic IPs aka "The Plot Thickens"](#dynamic-ips-aka-%22the-plot-thickens%22)
+    - [Dynamic IPs aka "The Plot Thickens"](#dynamic-ips-aka-the-plot-thickens)
     - [Wait a minute, I don't have a domain name](#wait-a-minute-i-dont-have-a-domain-name)
   - [balena.io](#balenaio)
     - [So what's the deal, exactly?](#so-whats-the-deal-exactly)
@@ -46,12 +46,12 @@ If you are familiar with the relevant terms (*IP, Domain Name*, etc.), go ahead 
   - [Provisioning the Device](#provisioning-the-device)
   - [Installing the Software](#installing-the-software)
     - [Jekyll](#jekyll)
-    - [Installing nginx-in-balena](#installing-nginx-in-balena)
+    - [Installing the server on the device](#installing-the-server-on-the-device)
   - [Configuring the Software](#configuring-the-software)
     - [Environment Variables](#environment-variables)
     - [nginx configuration](#nginx-configuration)
     - [ddiclient configuration](#ddiclient-configuration)
-  - [Configuring the environment](#configuring-the-environment)
+  - [Configuring the local network](#configuring-the-local-network)
     - [Static IP](#static-ip)
     - [Port Forwarding](#port-forwarding)
   - [Deploy](#deploy)
@@ -60,6 +60,7 @@ If you are familiar with the relevant terms (*IP, Domain Name*, etc.), go ahead 
     - [Updating your certificates](#updating-your-certificates)
     - [Push new content to the website](#push-new-content-to-the-website)
     - [Push new content to the website - For advanced users](#push-new-content-to-the-website---for-advanced-users)
+    - [Finally, a use-case](#finally-a-use-case)
 - [Comments](#comments)
 
 ## Static Website 
@@ -250,7 +251,7 @@ We will be using the certbot-CLI program to request a certificate for our websit
 
   
 
-Although Netdata is fairly complex and customizable, we will be using it because:
+We will be using Netdata because:
 
 1. It's super light (about 5% CPU consumption) and thus ideal for the constraint nature of a Raspberry pi 4.
 
@@ -361,30 +362,9 @@ Although this blog post focuses mainly on setting up a balena-powered raspberry 
 
   
 
-### Installing nginx-in-balena
+### Installing the server on the device
 
-  
-
-To install the software, we did all the heavy lifting for you. We aggregated all the relevant software and made sure that it can support the Raspberry pi 4 with a balenaOS 64bit. You only have to go download a local copy of the project:
-
-```shell
-
-git clone https://repo
-
-cd repo
-
-```
-
-  
-
-We are now into the project's directory. **Let's configure it!**
-
-  
-
->Possibly, the same software will run without problems on a Raspberry pi 3 with either 32 or 64 bit OS. If you test it successfully on a Raspberry pi 3, please do leave a comment and we will update the blog-post accordingly.
-
-  
-
+Well, you don't have to do anything. The software is already shipped ready to be installed directly on the device. Jump to the next section in order to download it locally, change some configuration based on your setup and then ship it!
   
 
 ## Configuring the Software
@@ -432,12 +412,12 @@ On the other hand, there are 2 environment variables that can be set using `bale
 2. **CERTBOT_FORCED:** If this environment variable is set to "1", the container will always request a new certification every time it restarts. If the current certification is still valid, it will simply inform the user that the certification is up-to-date and will exit.
 
 
-You can read more about `environment variables` in balena, in the [documentation](https://www.balena.io/docs/learn/manage/serv-vars/).
-You can read more about `build-time secrets` in balena, in the [documentation](https://www.balena.io/docs/learn/more/masterclasses/cli-masterclass/#81-build-time-secrets).
+ - You can read more about `environment variables` in balena, in the [documentation](https://www.balena.io/docs/learn/manage/serv-vars/).
+ - You can read more about `build-time secrets` in balena, in the [documentation](https://www.balena.io/docs/learn/more/masterclasses/cli-masterclass/#81-build-time-secrets).
 
 ### nginx configuration
 
-1. Run the commands bellow to generate a private key that will be used by nginx for *SSL* related functionality. As it might take some minutes, go ahead and read about it in this [Stack Overflow Question](https://security.stackexchange.com/questions/94390/whats-the-purpose-of-dh-parameters). Welcome to the world of *cryptography*.
+1. Run the commands bellow to generate a private key that will be used by nginx for *SSL* related functionality. As it might take some minutes, go ahead and read some information about it in this [Stack Overflow Question](https://security.stackexchange.com/questions/94390/whats-the-purpose-of-dh-parameters). 
 
   
 
@@ -490,11 +470,12 @@ If you want to read more about the `nginx` configuration file and what the vario
 
   
 
-## Configuring the environment
+## Configuring the local network
 
-  
+In order for this project to succeed we need to do 2 things:
 
-It's time to move on configuring our environment. In our case we need to allow ingoing connections from the router and make sure that the server will always have a `static ip` in the local network.
+1. Set the raspberry pi to have a static ip in the local network. This will ensure that the router will always know what's the correct IP for the server.
+2. Set the router to allow connections from the Internet that are intended for the server. In other words, allow users to access our web-page!
 
   
 
@@ -570,13 +551,8 @@ method=auto
 
 ### Port Forwarding
 
-  
 
-Since we are building a server, we need to allow people to be able to connect to our Raspberry Pi. Normally a home router will block all ingoing connections (connections that are not initiated from a device inside the local network), thus we need to create a rule and tell the router that each connection that is made to a specific **port** should be **forwarded** to the same **port** of the **Raspberry**.
-
-  
-
-When someone attempts to connect to the **IP** that is assigned to your home connection, in essence he connects to the *router*, as the *router* functions as the gateway between the outer network (the Internet) and the local network (LAN). Thus we want to tell the *router* that any time someone tries to continue to some specific port, in essence, he wants to connect to our server, thus the router must forward the connection to the Raspberry pi.
+When someone attempts to connect to the **IP** that is assigned to your home connection, in essence he connects to the *router*, as the *router* functions as the gateway between the outer network (the Internet) and the local network (LAN). Thus we want to tell the *router* that any time someone tries to continue to some specific port, in reality, he wants to connect to our server, thus the router must forward the connection to the Raspberry pi (the web server).
 
 In other words, we need to forward **ports** `80` and `443` to the Raspberry pi.
 
@@ -652,7 +628,7 @@ The `certificates` will be saved into a persistent directory with a functionalit
 
   
 
-You are very organized and want to plan ahead? Sure, cerbot will email you a couple of days before your certificates are invalidated so you can renew.
+You are very organized and want to plan ahead? No problem, certbot will automatically send you an e-mail when the certifications are about to expire.
 
 When you receive that e-mail, you only need to:
   
@@ -681,35 +657,50 @@ We have to upload the new source files into our `GitHub Repository` and then we 
 
 So, in order to push new content to the website:
 
-
-
 1. Change the website's source files
 2. Upload the new files to the Repository and add a `commit message` to describe the changes
 3. From `balena dashboard`, `ssh` into the `nginx` container and run: `/update-blog.sh`
 
-
-
 ### Push new content to the website - For advanced users
 
 
-
-The whole *process* has be **automated**, and you can simply run the script `deploy-dev-loca.sh` from the local directory of the project, like this:
+The whole *process* has been **automated**, and you can simply run the script `deploy-dev-loca.sh` from the local directory of the project, like this:
 
 `./deploy-dev-local.sh "<commit message>"`
 
 The field `<commit message>` must be replaced with a commit message for the addition to the `GitHub` repository, just like you did when you uploaded the files using the website of `GitHub`.
 
+This script does the following things:
+
+1. Builds the Jekyll website and outputs it to a pre-determined directory
+2. Commits the changed source files to the website's local repository
+3. Pushes the new local repository to the remote website's repository at Github
+4. `SSH` into the hostOS of the device, assuming it runs a development image, and then it `SSH` into the `nginx` container
+5. Runs the `update-blog.sh` script, which in turns:
+      1. Downloads the website's source files from the remote Github repository (the one we just uploaded to)
+      2. Replaces the old website with the new source files
+6. Now, Nginx serves the new website 
+
 Before you can you can use the script, you have to open the file using your favorite text editor and replace the following fields:
 
 ```shell
-
+ 
 # export J_OUTPUT= Absolute path to the directory of the website's source files
 
 # export REPO = Absolute path to the directory of the website's source files
 
 # export DEV_UUID= UUID of the device, can be found from the device's dashboard
 ```
+### Finally, a use-case
 
+In case you want to see how this setup works, here is my setup divided into 3 repositories:
+
+1. `balena-nginx`: The source files for the setup of the webserver. 
+   1. [Github Repository](https://github.com/balena-io-playground/balena-nginx)
+2. `clyell`: Fork from a Jekyll theme which I have modified extensively. This repository has all the files that are used by  `Jekyll` engine to create the source files of my blog. 
+   1. [Github Repository](https://github.com/OdysLam/clyell)
+3. `odyslam.github.io`: Repository which holds the source files of my entire website. This is the repository that is downloaded to the webserver. It consists of the main website which is a plain `html`, `CSS`, `JS` website built by hand and the `/blog` directory which is built by Jekyll from the files of the `clyell` repository.
+   1. [Github Repository](https://github.com/OdysLam/odyslam.github.io)
 # Comments
 
   

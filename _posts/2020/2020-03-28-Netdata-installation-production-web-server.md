@@ -9,7 +9,7 @@ tags:
     - "2020"
     - tutorial
     - technology
-excerpt: "This post describes how to install and configure Netdata for a production server for a typical PHP webserver (Nginx, php, MariaDB)"
+excerpt: "A complete guide on how to install and configure Netdata for a production server for a typical PHP webserver (Nginx, php, MariaDB)"
 image: https://pbs.twimg.com/profile_images/1146809342013988864/T0ULmki3_400x400.png
 vertical: devops
 ---
