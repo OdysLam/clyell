@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: "blog.py"
+description: "A personal blog mainly about technology, but everything under the sun is fair-game. Curated by Odysseas Lamtzidis"
 
 ---
 <ul class="posts">
