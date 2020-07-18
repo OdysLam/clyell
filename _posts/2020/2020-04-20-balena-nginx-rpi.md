@@ -61,7 +61,6 @@ If you are familiar with the relevant terms (*IP, Domain Name*, etc.), go ahead 
     - [Push new content to the website](#push-new-content-to-the-website)
     - [Push new content to the website - For advanced users](#push-new-content-to-the-website---for-advanced-users)
     - [Finally, a use-case](#finally-a-use-case)
-- [Comments](#comments)
 
 ## Static Website 
 
@@ -97,15 +96,9 @@ Nginx is a very robust web server, allowing the user to perform a myriad of diff
 
 As we are *lazy*, we don't want to write a blog website from scratch, as it would entail considerable overhead for each new post we want to make. What we want, is a framework that will have a certain *theme* and which will generate the static files of the blog **for us**, allowing us to focus solely on the content of the blog.
 
-  
-
-Luckily for us, there is a very easy-to-use framework, called **Jekyll**. It was created by Github's co-founder Tom Preston-Werner. As we read from the project's [repository](https://github.com/jekyll/jekyll) `readme.md`:
-
-  
+Luckily for us, there is a very easy-to-use framework, called **Jekyll**. It was created by Github's co-founder Tom Preston-Werner. As we read from the project's [repository](https://github.com/jekyll/jekyll) **README**:
 
 >Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind [GitHub Pages](https://pages.github.com/), which you can use to host sites right from your GitHub repositories.
-
-  
 
 The power of Jekyll is that it is super easy to use, so easy, that you don't even need programming knowledge (Verified from personal experience). In essence, you configure a Jekyll `theme` using a central configuration file and then you write the blog posts in `markdown` format (More on markdown [here](https://www.markdownguide.org/getting-started/)).
 
@@ -222,22 +215,13 @@ Developing and managing IoT devices have **never** been so easy and *beautiful*.
 ![](https://i.imgur.com/Mp9pB7M.png)
 
   
-
-
-**Disclaimer**: I work at balena.io in the product team.  Thus, you *could* say that I am a bit biased.
-
+**Disclaimer**: I worked at balena.io in the product team.  Thus, you *could* say that I am a bit biased.
 
 ## Complimentary Software:
 
-  
-
 ### Certbot
 
-  
-
 `Certbot` is a service offered by [letsencrypt](https://letsencrypt.org/), a nonprofit Certificate Authority providing TLS certificates for anyone who may ask. This way, users will be able to connect securely on our website, using `https`.
-
-  
 
 We will be using the certbot-CLI program to request a certificate for our website. In essence, certbot will place a special file for our webserver to serve. When the authority tests the website, it will find the specific file and verify that the website (and thus the domain) is indeed ours. **Giving us a certificate for 90 days**.
 
@@ -254,7 +238,6 @@ We will be using the certbot-CLI program to request a certificate for our websit
 We will be using Netdata because:
 
 1. It's super light (about 5% CPU consumption) and thus ideal for the constraint nature of a Raspberry pi 4.
-
 2. It can auto-detect `nginx` and start gathering data using the `stub_page` of the webserver. You can read more about `stub_page` [here](https://easyengine.io/tutorials/nginx/status-page/).
 
   
@@ -272,9 +255,7 @@ We will be using the multi-container functionality of the platform, thus the pro
   
 
 1. **webserver:** Runs the `nginx` service and the `certbot` for SSL generation
-
 2. **ddclient:** Runs the `ddiclient` service
-
 3. **netdata monitoring:** Runs an instance of [Netdata Monitoring software](https://github.com/netdata/netdata) to overview the load of the server.
 
   
@@ -310,12 +291,8 @@ Go ahead, **I'll wait.**
 Before going forward, we assume that:
 
 1. You have balena-CLI installed
-
 2. You have balena-etcher installed
-
-3. You have logged in balena-CLI
-
-4. You have logged in balena dashboard 
+3. You have logged in balena dashboard 
 
   
 
@@ -334,31 +311,21 @@ Although this blog post focuses mainly on setting up a balena-powered raspberry 
   
 
 1. **Visit** Jekyll's website and follow the [Get started guide](https://jekyllrb.com/docs/).
-
 2. Get yourself familiar with the Jekyll templating engine
-
 3. **Search** for a Jekyll theme that is appealing to you:
     1. [http://jekyllthemes.org/](http://jekyllthemes.org/)
     2. [https://jekyllthemes.io/](https://jekyllthemes.io/)
-
 4. **Download** the theme locally and configure it according to the **theme's** and **Jekyll's documentation**.
-
 5. **Build** the website according to the **theme's documentation**, the `source files` will be placed in a directory called `_site`.
-
 6. Upload the files inside `_site` to a *Github Repository*.
 
   
 <br>
 **Disclaimer:** If you haven't used Github again:
-<br>
-<br>
 
-
-1) Follow ths [guide](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository) to create a new `repository` to Github.
-
-2) Follow this [guide](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository) to upload all your website's source files to the `repository` you just created. Simply drag and drop all of them as it is shown in the guide.
-
-3) **Congratulations!** You have your very first project on Github!
+1. Follow this [guide](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository) to create a new `repository` to Github.
+2. Follow this [guide](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository) to upload all your website's source files to the `repository` you just created. 
+3. **Congratulations!** You have your very first project on Github!
 
   
 
@@ -391,15 +358,10 @@ Well, you don't have to do anything. The software is already shipped ready to be
 
 ```shell
 REPO_ZIP_URL=https://github.com/OdysLam/odyslam.github.io/archive/master.zip
-
 REPO_NAME=odyslam.github.io
-
 CERTBOT_MAIL=hi@odyslam.me
-
 CERTBOT_DOMAIN_1=www.example.com
-
 CERTBOT_DOMAIN_2=example.com
-
 ```
 
 This environment variables are not expected to change while the server runs, thus we prefer to define them at build time.
@@ -422,32 +384,26 @@ On the other hand, there are 2 environment variables that can be set using `bale
   
 
 ```shell
-
 cd nginx
-
 openssl dhparam -out dhparam.pem 2048
-
 cd ..
-
 ```
 
 2. Using a text editor, open `nginx.conf` which will find the `nginx` directory. Head over to the following excerpt and replace the `www.example.com` and `example.com` with your domain name.
 
 ```conf
-
 server {
 listen 443 ssl http2;
 server_name www.example.com example.com
-
+...
 ```
 
 ```
 server {
-
 listen 80;
 listen [::]:80;
 server_name www.example.com example.com;
-
+...
 ```
 
 If you want to read more about the `nginx` configuration file and what the various fields mean, you can read more about it here:
@@ -498,53 +454,33 @@ Balena allows us to set our device to static IP in a breeze.
 3. Replace the field `ROUTER_IP` with the `IP` of the router.
 
 4. Replace the field `DEVICE_IP` with the `IP` of your balena device with a small change. Change the digits after the last `.` to `100`.
+
 5. Close the text editor.
 
 Here is an example, note that here the `IP` has the format `192.168.1.X`
 
 ```
-
 [connection]
-
 id=my-ethernet
-
 type=ethernet
-
 interface-name=eth0
-
 permissions=
-
 secondaries=
 
-  
-
 [ethernet]
-
 mac-address-blacklist=
 
-  
-
 [ipv4]
-
 #This is the important line
 address1=192.168.1.100/24,192.168.1.1 
-
 dns=8.8.8.8;8.8.4.4;
-
 dns-search=
-
 method=manual
 
-  
-
 [ipv6]
-
 addr-gen-mode=stable-privacy
-
 dns-search=
-
 method=auto
-
 ```  
 
   
@@ -552,81 +488,47 @@ method=auto
 ### Port Forwarding
 
 
-When someone attempts to connect to the **IP** that is assigned to your home connection, in essence he connects to the *router*, as the *router* functions as the gateway between the outer network (the Internet) and the local network (LAN). Thus we want to tell the *router* that any time someone tries to continue to some specific port, in reality, he wants to connect to our server, thus the router must forward the connection to the Raspberry pi (the web server).
+When someone attempts to connect to the **IP** that is assigned to your home connection, in essence he/she connects to the *router*, as it functions as the gateway between the outer network (the Internet) and the local network (LAN). Thus we want to tell the *router* that any time someone tries to continue to some specific port, in reality, he/she wants to connect to our server, thus the router must forward the connection to the Raspberry pi (the web server).
 
 In other words, we need to forward **ports** `80` and `443` to the Raspberry pi.
 
 1. **Visit** [portforward](https://portforward.com/)
-
 2. Find your router
-
 3. Follow instructions and forward the ports to the device's IP
-
-  
-
-We are almost there, let's deploy the device.
-
-  
 
 ## Deploy
 
-  
-
-Now that we have everything configured, let's start deploying the various components.
-
-  
-
-  
-
-  
+Now that we have everything configured, let's start deploying the various components. 
 
 ### Deploy the project to the device
 
   
 
 1. Open balenaCloud and create a new application for `Raspberry pi 4`. You can name it whatever you want. We will assume that you name it `bananas`.
-
 2. Download an `development` image for that application. Don't bother filling in your `wifi` credentials, we will be using `ethernet` as `wifi` is not very reliable for a webserver.
-
     ![](https://media.giphy.com/media/5hc2bkC60heU/giphy.gif)
-
-  
-
 3. Burn the image using the best image format app in the world, **balena-etcher**.
-
 4. Pull out the sd card and re-insert it in the computer. Copy the file named `static-ip` we created earlier into the `system-connections` directory of the sd card.
-
 5. Insert the card into the Raspberry pi and connect it to power.
-
 6. Go to the `balena-nginx` directory, where your `docker-compose.yaml` is located, and push the project
 
 ```shell
-
 balena push bananas
-
 ```
 
   
 
 ### Generating the SSL certificate
 
-  
 
 To generate the SSL certificate, we don't have to do anything.
 
-  
-
 The server will detect the absence of the certificates and will run the `certbot` service to register your website. Afterward, it will simply start the server and will serve your website.
-
-  
 
 The `certificates` will be saved into a persistent directory with a functionality called `named volumes`. This enables the device to persist your certificates (or any data in that directory)
 
-  
-
 ### Updating your certificates
 
-  
 
 You are very organized and want to plan ahead? No problem, certbot will automatically send you an e-mail when the certifications are about to expire.
 
@@ -684,24 +586,21 @@ This script does the following things:
 Before you can you can use the script, you have to open the file using your favorite text editor and replace the following fields:
 
 ```shell
- 
 # export J_OUTPUT= Absolute path to the directory of the website's source files
-
 # export REPO = Absolute path to the directory of the website's source files
-
 # export DEV_UUID= UUID of the device, can be found from the device's dashboard
 ```
+
 ### Finally, a use-case
 
 In case you want to see how this setup works, here is my setup divided into 3 repositories:
 
 1. `balena-nginx`: The source files for the setup of the webserver. 
-   1. [Github Repository](https://github.com/balena-io-playground/balena-nginx)
-2. `clyell`: Fork from a Jekyll theme which I have modified extensively. This repository has all the files that are used by  `Jekyll` engine to create the source files of my blog. 
-   1. [Github Repository](https://github.com/OdysLam/clyell)
-3. `odyslam.github.io`: Repository which holds the source files of my entire website. This is the repository that is downloaded to the webserver. It consists of the main website which is a plain `html`, `CSS`, `JS` website built by hand and the `/blog` directory which is built by Jekyll from the files of the `clyell` repository.
-   1. [Github Repository](https://github.com/OdysLam/odyslam.github.io)
-# Comments
+  - [Github Repository](https://github.com/balena-io-playground/balena-nginx)
+1. `clyell`: Fork from a Jekyll theme which I have modified extensively. This repository has all the files that are used by  `Jekyll` engine to create the source files of my blog. 
+   -  [Github Repository](https://github.com/OdysLam/clyell)
+2. `odyslam.github.io`: Repository which holds the source files of my entire website. This is the repository that is downloaded to the webserver. It consists of the main website which is a plain `html`, `CSS`, `JS` website built by hand and the `/blog` directory which is built by Jekyll from the files of the `clyell` repository.
+  - [Github Repository](https://github.com/OdysLam/odyslam.github.io)
 
   
 
