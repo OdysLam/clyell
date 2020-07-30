@@ -23,45 +23,6 @@ We will start with some introductory terms to get a lay of the land and then we 
 
 If you are familiar with the relevant terms (*IP, Domain Name*, etc.), go ahead and jump to [Let's get to it](#lets-get-to-it).
 
-# Table of Contents
-
-- [Introduction](#introduction)
-- [Table of Contents](#table-of-contents)
-  - [Static Website](#static-website)
-  - [Webserver](#webserver)
-  - [Blogging software - Jekyll](#blogging-software---jekyll)
-  - [Domain](#domain)
-    - [What's an IP](#whats-an-ip)
-    - [But what it has to do with domains?](#but-what-it-has-to-do-with-domains)
-    - [Dynamic IPs aka "The Plot Thickens"](#dynamic-ips-aka-the-plot-thickens)
-    - [Wait a minute, I don't have a domain name](#wait-a-minute-i-dont-have-a-domain-name)
-  - [balena.io](#balenaio)
-    - [So what's the deal, exactly?](#so-whats-the-deal-exactly)
-  - [Complimentary Software:](#complimentary-software)
-    - [Certbot](#certbot)
-    - [Netdata](#netdata)
-  - [Architecture](#architecture)
-    - [Components](#components)
-- [Let's get to it](#lets-get-to-it)
-  - [Provisioning the Device](#provisioning-the-device)
-  - [Installing the Software](#installing-the-software)
-    - [Jekyll](#jekyll)
-    - [Installing the server on the device](#installing-the-server-on-the-device)
-  - [Configuring the Software](#configuring-the-software)
-    - [Environment Variables](#environment-variables)
-    - [nginx configuration](#nginx-configuration)
-    - [ddiclient configuration](#ddiclient-configuration)
-  - [Configuring the local network](#configuring-the-local-network)
-    - [Static IP](#static-ip)
-    - [Port Forwarding](#port-forwarding)
-  - [Deploy](#deploy)
-    - [Deploy the project to the device](#deploy-the-project-to-the-device)
-    - [Generating the SSL certificate](#generating-the-ssl-certificate)
-    - [Updating your certificates](#updating-your-certificates)
-    - [Push new content to the website](#push-new-content-to-the-website)
-    - [Push new content to the website - For advanced users](#push-new-content-to-the-website---for-advanced-users)
-    - [Finally, a use-case](#finally-a-use-case)
-
 ## Static Website 
 
   

@@ -16,50 +16,6 @@ vertical: devops
 Created: Dec 05, 2019 | Updated: Jan 12, 2020 | Document Version: 0.3
 <br>
 <br>
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Why](#why)
-- [Introduction](#introduction)
-    - [So what Netdata does?](#so-what-netdata-does)
-    - [How netdata collectors work:](#how-netdata-collectors-work)
-  - [Requirements for the use-case](#requirements-for-the-use-case)
-- [Installation](#installation)
-  - [Netdata](#netdata)
-  - [Firewall issues](#firewall-issues)
-  - [Installation using Package Manager](#installation-using-package-manager)
-  - [Nginx Proxy - Security Alert](#nginx-proxy---security-alert)
-  - [Necessary Libraries](#necessary-libraries)
-    - [Update/Install either Python 2.7+ or Python 3.1+](#updateinstall-either-python-27-or-python-31)
-- [Important Note on Python Version](#important-note-on-python-version)
-    - [Install PiP (Python Package Manager)](#install-pip-python-package-manager)
-    - [Install Collector Libraries:](#install-collector-libraries)
-      - [Ubuntu](#ubuntu)
-      - [CentOS](#centos)
-- [Netdata Configuration](#netdata-configuration)
-  - [General Configuration](#general-configuration)
-  - [Collectors (Data Collection)](#collectors-data-collection)
-    - [General Information](#general-information)
-    - [Chosen Collectors:](#chosen-collectors)
-    - [Notes on editing the configuration files:](#notes-on-editing-the-configuration-files)
-    - [DB engine](#db-engine)
-  - [Health & Alarms](#health--alarms)
-    - [Notifications](#notifications)
-    - [Email Configuration](#email-configuration)
-  - [Streaming](#streaming)
-    - [Master Node](#master-node)
-    - [Slave Node](#slave-node)
-  - [Registry](#registry)
-  - [Backends (Long-term Storage)](#backends-long-term-storage)
-    - [Prometheus Installation](#prometheus-installation)
-    - [Prometheus Configuration](#prometheus-configuration)
-    - [Test Prometheus](#test-prometheus)
-    - [Prometheus Service](#prometheus-service)
-    - [Prometheus and High-Availability](#prometheus-and-high-availability)
-    - [Grafana](#grafana)
-- [Acknowledgement](#acknowledgement)
-- [Comments](#comments)
-
 # Why 
 
 A while back I discovered [Netdata](https://netdata.cloud) and I was truly fascinated by it's take on system monitoring for two main reasons. It was extremely lightweight, something of great usefulness to me, an IoT enthusiast, as it proved to be a  very useful tool to debug IoT devices, such as the Raspberry pi. 
@@ -81,9 +37,9 @@ Wanting to dig further, I was extremely fortunate to be introduced to a sys-admi
 This post is intended for the purpose of onboarding a production web-server to the Netdata platform, introducing a new era to metrics and performance monitoring. Netdata is built around 4 main principles:
 
 - **Per second** data collection for all metrics.
-- Collection & Visualisation of metrics from **all possible** sources
+- Collection & Visualization of metrics from **all possible** sources
 - Meaningful presentation of metrics, optimised for visual anomaly detection
-- **Preconfigured**, fire (install) and forget!
+- **Pre-configured**, fire (install) and forget!
 
 > Netdata decentralizes monitoring completely. Each Netdata node is autonomous. It collects metrics locally, it stores them locally, it runs checks against them to trigger alarms locally, and provides an API for the dashboards to visualize them. **Horizontal Scale**
 
@@ -134,7 +90,7 @@ This installation will be replicated to both the machines that will host a web-s
 
 There are multiple ways to install netdata, but the user is advised to use the one-line script that is provided by netdata. According to the requirements, this is the optimal route.
 
-With the one-liner below, you install netdata and all the dependencies. You also agree that Netdata will aggregate anonymous statistics (such as OS version) that is necessary for rapid product development and discovery (prioritise OS binaries, decide features etc.)
+With the one-liner below, you install netdata and all the dependencies. You also agree that Netdata will aggregate anonymous statistics (such as OS version) that is necessary for rapid product development and discovery (prioritize OS binaries, decide features etc.)
 
 ```bash
 bash <(curl -Ss [https://my-netdata.io/kickstart.sh](https://my-netdata.io/kickstart.sh)) --no-updates --stable-channel
@@ -152,7 +108,7 @@ Now that Netdata is (hopefully) installed, please head over to [http://localhost
 
 ## Firewall issues
 
-If you can't connect, it's possible that you have a firewall installed and that you have to open the port `19999`.  Belowdav you can find relevant information and commands for Ubuntu & CentOS.
+If you can't connect, it's possible that you have a firewall installed and that you have to open the port `19999`.  Below you can find relevant information and commands for Ubuntu & CentOS.
 
 **Ubuntu:**
 
@@ -549,7 +505,7 @@ Now it is time to setup the **Master Node**:
     health enabled by default = auto
     allow from = *
 ```
-3. For the initial testing period we wont't be editing anything else. You can return later to customise it according to your specific needs.
+3. For the initial testing period we won't be editing anything else. You can return later to customise it according to your specific needs.
 4. Since both the machines belong to the same secured network, we won't be needing authentication and TLS support.
 
 You can find in-detail explanation of all the available configuration options for the streaming functionality in the docs.
@@ -628,7 +584,7 @@ Remember that the slave's database is been replicated to the Master Node, with r
 
 To enable long-term historic data we will be using the backends functionality of netdata. According to the requirements, we will be using Prometheus to grab data from the Master Node and save it in a time-series long term database.
 
-In essence, we will point **Prometheus** to **netdata** in order to fetch data and **Grafana** to **Prometheus** in order to visualise them.
+In essence, we will point **Prometheus** to **netdata** in order to fetch data and **Grafana** to **Prometheus** in order to visualize them.
 
 We will set the Prometheus sampling at 3m, since for historic data 1s accuracy is not required.
 
