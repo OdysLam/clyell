@@ -6,6 +6,14 @@ export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export DEV_UUID=b6811f2
 
+git add -A && git commit --signoff -m "$1"
+if [ $? -eq 0 ]; then
+    echo "changed pushed to clyell repository"
+else 
+    echo "failed to push changes to clyell repository"
+    exit 1
+fi
+
 bundle exec jekyll build -d $J_OUTPUT
 if [ $? -eq 0 ]; then
     cd $REPO
@@ -16,9 +24,11 @@ if [ $? -eq 0 ]; then
         ssh -Tp 22222 root@b6811f2.local "balena-engine exec $CONTAINER_ID /bin/sh /update-blog.sh"
     else
         echo "no commit message, deploy is aborted.."    
+        exit 1
     fi
 else
     echo "Jekyll build failed, please try again"
+    exit 1
 fi
 
 
