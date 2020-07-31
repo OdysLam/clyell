@@ -1,6 +1,6 @@
 ---
 layout: post
-title:	"How to jump straight to a startup from University [GR]"
+title:	"Jumping to a startup straight from a Greek University Part 1 [GR]"
 date:	2020-07-31
 author: "Odysseas Lamtzidis"
 # category:
