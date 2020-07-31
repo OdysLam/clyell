@@ -20,6 +20,8 @@ if [ $? -eq 0 ]; then
     git add -A && git commit --signoff -m "$1" 
     if [ $? -eq 0 ]; then
         git push && echo "Changes were pushed to Github!"
+        CONTAINER_ID=$(ssh -Tp 22222 root@$DEV_UUID.local <<< 'balena-engine ps' | grep 'nginx' | awk '{print $1}')
+        ssh -Tp 22222 root@b6811f2.local "balena-engine exec $CONTAINER_ID /bin/sh /update-blog.sh"
     else
         echo "no commit message, deploy is aborted.."    
         exit 1
