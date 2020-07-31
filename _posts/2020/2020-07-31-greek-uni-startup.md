@@ -112,7 +112,7 @@ This is part of a blog-post series that is intended for Greek university student
 ### Τεκμήρια
 ![](https://i.imgur.com/VqhurI7.png)
 <br>
-My gihub Portfolio ☝️
+My github Portfolio ☝️
 
 Όπως ανέφερα, χρειαζόμαστε τεκμήρια, δηλαδή ένα **πορτφόλιο (portfolio)**, όπως ακριβώς ένας φωτογράφος. Ανάλογα με την δεξιότητα που θέλουμε να αποδείξουμε, αλλάζει και  το τεκμήριο που πρέπει να παραθέσουμε. 
 
