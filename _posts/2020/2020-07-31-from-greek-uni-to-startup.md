@@ -15,7 +15,7 @@ image: https://i.imgur.com/OAeoTWb.png
 vertical: self-improvement
 ---
 ![intro image](https://i.imgur.com/OAeoTWb.png)
-Right: Ilia
+Image: We start as [this](https://www.youtube.com/watch?v=Otgm8oxEy_w), but we want to become [this](https://www.youtube.com/watch?v=Vm4tx1O9GAc).
 
 # Disclaimer
 
