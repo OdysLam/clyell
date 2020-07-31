@@ -1,6 +1,6 @@
 ---
 layout: post
-title:	"From the Greek University to a startup - Part 1 [GR]"
+title:	"From the Greek University to a startup -  Part 1 [GR]"
 date:	2020-07-31
 author: "Odysseas Lamtzidis"
 # category:
@@ -11,9 +11,10 @@ tags:
     - career
     - greek
 excerpt: "Γιατί αξίζει να κυνηγήσεις μια δουλειά σε startup και πως μπορείς να το κάνεις"
-image: https://vortexbladeless.com/wp-content/uploads/2018/11/successful-startup-vortex.jpg
+image: https://i.imgur.com/OAeoTWb.png
 vertical: self-improvement
 ---
+![intro image](https://i.imgur.com/OAeoTWb.png)
 
 # Disclaimer
 
