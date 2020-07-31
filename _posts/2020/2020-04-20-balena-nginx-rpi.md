@@ -8,9 +8,9 @@ author: "Odysseas Lamtzidis"
 tags:
     - "2020"
     - tutorial
-    - balena
-    - technology
     - nginx
+    - balena
+    - english
 excerpt: "A complete guide on how to host your website at home with a Raspberry pi"
 image: https://i.imgur.com/Zd3GZX7.jpg
 vertical: iot

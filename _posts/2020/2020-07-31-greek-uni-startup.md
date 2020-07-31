@@ -9,6 +9,7 @@ tags:
     - "2020"
     - self-improvement
     - career
+    - greek
 excerpt: "Γιατί αξίζει να κυνηγήσεις μια δουλειά σε startup και πως μπορείς να το κάνεις"
 image: https://vortexbladeless.com/wp-content/uploads/2018/11/successful-startup-vortex.jpg
 vertical: self-improvement
