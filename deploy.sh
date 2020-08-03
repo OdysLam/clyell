@@ -27,6 +27,7 @@ else
     echo "Jekyll build failed, please try again"
     exit 1
 fi
+
 echo "Reading balena token from file.."
 token=$(cat balena_token)
 balena login -t $token
