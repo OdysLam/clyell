@@ -181,5 +181,11 @@ My github Portfolio ☝️ (κάνε κλικ για να μεγαλώσει η 
 
 # To be continued
 
-Στο επόμενο ποστ θα μιλήσουμε για το δίκτυο, πως το φτιάχνουμε, για το βιογραφικό και άλλα. Θέλω να ευχαριστήσω τον [Χάρη Τουλούπα](https://www.linkedin.com/in/harry-touloupas/) για τις εύστοχες προσθήκες του, τον [Βαγγέλη Ντομπρόζη](https://www.linkedin.com/in/entomprozis), τον [Ανδρόνικο Κοντό](https://www.linkedin.com/in/andronikos-kontos/?originalSubdomain=gr) και τον [Greek Startup Pirate](https://twitter.com/StartupPirateGR) για τις διορθώσεις τους.
+Στο επόμενο ποστ θα μιλήσουμε για το δίκτυο, πως το φτιάχνουμε, για το βιογραφικό και άλλα. 
+
+Θέλω να ευχαριστήσω τον [Χάρη Τουλούπα](https://www.linkedin.com/in/harry-touloupas/) για τις εύστοχες προσθήκες του, τον [Βαγγέλη Ντομπρόζη](https://www.linkedin.com/in/entomprozis), τον [Ανδρόνικο Κοντό](https://www.linkedin.com/in/andronikos-kontos/?originalSubdomain=gr) και τον [Greek Startup Pirate](https://twitter.com/StartupPirateGR) για τις διορθώσεις τους.
+
+Εαν σας φάνηκε ενδιαφέρον ή ευχάριστο, αφήστε ένα comment από κάτω ή γραφτείτε στο mailing list 🙏.
+
+(Όλο το website, βρίσκεται [εδώ](https://imgur.com/gallery/iznOLOb))
 
