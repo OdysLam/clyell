@@ -14,6 +14,8 @@ else
     exit 1
 fi
 
+balena login -t cPQUuDzsFvdOsw1rie8aYonNhJMW1Fez
+
 bundle exec jekyll build -d $J_OUTPUT
 if [ $? -eq 0 ]; then
     cd $REPO
