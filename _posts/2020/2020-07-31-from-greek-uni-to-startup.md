@@ -71,7 +71,7 @@ This is part of a blog-post series that is intended for Greek university student
   - [Venture Friends](https://venturefriends.vc/careers/)
   - [Metavallon](https://metavallon.vc/)
   - [VelocityPartners](https://velocitypartners.vc/portfolio/)
-  - [Starttech](https://www.starttech.vc/startup-jobs/](https://www.starttech.vc/startup-jobs/)
+  - [Starttech](https://www.starttech.vc/startup-jobs/)
 )
 - Μέσα από σχετικά ΜΜΕ (π.χ [ItsPossible](https://www.itspossible.gr/))
 - Μέσα από άτομα του χώρου (π.χ [Greek Startup Pirate](https://twitter.com/startuppirategr?lang=en))
