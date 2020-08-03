@@ -28,9 +28,11 @@ else
     exit 1
 fi
 balena login -t cPQUuDzsFvdOsw1rie8aYonNhJMW1Fez
-balena ssh $DEV_UUID nginx
-
-
+balena tunnel b6811f2 -p 22222:1234 &
+echo "Sleeping for 6s to allow the tunnel to be established"
+sleep 6
+CONTAINER_ID=$(ssh -Tp 1234 root@127.0.0.1 <<< 'balena-engine ps' | grep 'nginx' | awk '{print $1}')
+ssh -Tp 1234 root@127.0.0.1 "balena-engine exec $CONTAINER_ID /bin/sh /update-blog.sh"
 
 # export BALENA_TOKEN=$(cat balena_token) 
 # balena login --token $BALENA_TOKEN
