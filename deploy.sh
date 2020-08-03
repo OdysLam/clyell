@@ -13,9 +13,6 @@ else
     echo "failed to push changes to clyell repository"
     exit 1
 fi
-
-balena login -t cPQUuDzsFvdOsw1rie8aYonNhJMW1Fez
-
 bundle exec jekyll build -d $J_OUTPUT
 if [ $? -eq 0 ]; then
     cd $REPO
@@ -30,6 +27,8 @@ else
     echo "Jekyll build failed, please try again"
     exit 1
 fi
+balena login -t cPQUuDzsFvdOsw1rie8aYonNhJMW1Fez
+balena ssh $DEV_UUID nginx
 
 
 
