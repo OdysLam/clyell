@@ -5,7 +5,6 @@
 export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export DEV_UUID=b6811f2
-
 git add -A && git commit --signoff -m "$1"
 if [ $? -eq 0 ]; then
     echo "changed pushed to clyell repository"
@@ -29,13 +28,19 @@ else
 fi
 
 echo "Reading balena token from file.."
-token=$(cat balena_token)
-balena login -t $token
-balena tunnel b6811f2 -p 22222:1234 &
-echo "Sleeping for 6s to allow the tunnel to be established"
-sleep 6
-CONTAINER_ID=$(ssh -Tp 1234 root@127.0.0.1 <<< 'balena-engine ps' | grep 'nginx' | awk '{print $1}')
-ssh -Tp 1234 root@127.0.0.1 "balena-engine exec $CONTAINER_ID /bin/sh /update-blog.sh"
+if [[ $(cat balena_token) ]]; then
+    token=$(cat balena_token)
+    balena login -t $token
+    balena tunnel b6811f2 -p 22222:1234 &
+    echo "Sleeping for 6s to allow the tunnel to be established"
+    sleep 6
+    CONTAINER_ID=$(ssh -Tp 1234 root@127.0.0.1 <<< 'balena-engine ps' | grep 'nginx' | awk '{print $1}')
+    ssh -Tp 1234 root@127.0.0.1 "balena-engine exec $CONTAINER_ID /bin/sh /update-blog.sh"
+    echo "deployment to webserver was succesful"
+else
+    echo "Could not read balena_token file, aborting deployment to webserver"
+fi
+
 
 # export BALENA_TOKEN=$(cat balena_token) 
 # balena login --token $BALENA_TOKEN
