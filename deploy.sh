@@ -27,7 +27,9 @@ else
     echo "Jekyll build failed, please try again"
     exit 1
 fi
-balena login -t cPQUuDzsFvdOsw1rie8aYonNhJMW1Fez
+echo "Reading balena token from file.."
+token=$(cat balena_token)
+balena login -t $token
 balena tunnel b6811f2 -p 22222:1234 &
 echo "Sleeping for 6s to allow the tunnel to be established"
 sleep 6
