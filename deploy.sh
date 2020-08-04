@@ -11,6 +11,7 @@ if [ $1 = 'push' ]; then
 elif [ $1 = 'commit' ]; then
     echo "commiting and pushing changes to remote repository"
     git add -A && git commit --signoff -m "$2"
+    git push
 elif [ -z "$1" ]; then 
     github=0
 else 
@@ -23,7 +24,7 @@ else
     echo "failed to push changes to clyell repository"
     exit 1
 fi
-if [[github -ne 0 ]; then
+if [[ github -ne 0 ]; then
     bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
         cd $REPO
