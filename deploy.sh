@@ -4,6 +4,7 @@
 
 export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
+export CLYELL=/Users/odys/Github/clyell
 export DEV_UUID=b6811f2
 if [ -z "$1" ]; then 
     github=0
@@ -42,6 +43,7 @@ if [ $github -eq 1 ]; then
         exit 1
     fi
 fi
+cd $CLYELL
 echo "Reading balena token from file.."
 if [[ $(cat ./balena_token) ]]; then
     token=$(cat ./balena_token)
