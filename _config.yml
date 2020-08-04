@@ -7,6 +7,7 @@ baseurl: "/blog"
 future: true
 # Header settings
 nick: "hi"
+version: "1"
 mail:
     domain: "odyslam"
     ext: "me"
