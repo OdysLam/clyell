@@ -5,7 +5,16 @@
 export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export DEV_UUID=b6811f2
-git add -A && git commit --signoff -m "$1"
+if [ $1 -eq 'push' ]; then
+    echo "pushing chnanges to remote repository"
+    git push 
+elif [[$1 -eq 'commit']]; then
+    echo "commiting and pushing changes to remote repository"
+    git add -A && git commit --signoff -m "$2"
+else 
+    echo "Unknown command, aborting"
+    exit
+fi
 if [ $? -eq 0 ]; then
     echo "changed pushed to clyell repository"
 else 
