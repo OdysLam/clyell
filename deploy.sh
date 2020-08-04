@@ -31,7 +31,7 @@ if [ $github -eq 1 ]; then
     bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
         cd $REPO
-        git add -A && git commit --signoff -m "$1" 
+        git add -A && git commit --signoff -m "$2" 
         if [ $? -eq 0 ]; then
             git push && echo "Changes were pushed to Github!"
         else
