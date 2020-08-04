@@ -5,15 +5,17 @@
 export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export DEV_UUID=b6811f2
-if [ $1 -eq 'push' ]; then
+if [ $1 = 'push' ]; then
     echo "pushing chnanges to remote repository"
     git push 
-elif [[$1 -eq 'commit']]; then
+elif [ $1 = 'commit' ]; then
     echo "commiting and pushing changes to remote repository"
     git add -A && git commit --signoff -m "$2"
+elif [ -z "$1" ]; then 
+    github=0
 else 
     echo "Unknown command, aborting"
-    exit
+    exit 1
 fi
 if [ $? -eq 0 ]; then
     echo "changed pushed to clyell repository"
@@ -21,24 +23,25 @@ else
     echo "failed to push changes to clyell repository"
     exit 1
 fi
-bundle exec jekyll build -d $J_OUTPUT
-if [ $? -eq 0 ]; then
-    cd $REPO
-    git add -A && git commit --signoff -m "$1" 
+if [[github -ne 0 ]; then
+    bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
-        git push && echo "Changes were pushed to Github!"
+        cd $REPO
+        git add -A && git commit --signoff -m "$1" 
+        if [ $? -eq 0 ]; then
+            git push && echo "Changes were pushed to Github!"
+        else
+            echo "no commit message, deploy is aborted.."    
+            exit 1
+        fi
     else
-        echo "no commit message, deploy is aborted.."    
+        echo "Jekyll build failed, please try again"
         exit 1
     fi
-else
-    echo "Jekyll build failed, please try again"
-    exit 1
 fi
-
 echo "Reading balena token from file.."
-if [[ $(cat balena_token) ]]; then
-    token=$(cat balena_token)
+if [[ $(cat ./balena_token) ]]; then
+    token=$(cat ./balena_token)
     balena login -t $token
     balena tunnel b6811f2 -p 22222:1234 &
     echo "Sleeping for 6s to allow the tunnel to be established"
