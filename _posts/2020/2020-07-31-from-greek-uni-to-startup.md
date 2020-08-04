@@ -14,7 +14,7 @@ excerpt: "Γιατί αξίζει να κυνηγήσεις μια δουλει�
 image: https://i.imgur.com/OAeoTWb.png
 vertical: self-improvement
 ---
-![intro image](https://i.imgur.com/OAeoTWb.png)](https://imgur.com/a/JAYPnhV)
+![intro image](https://i.imgur.com/OAeoTWb.png)
 Image: We start as [this](https://www.youtube.com/watch?v=Otgm8oxEy_w){:target="_blank"}, but we want to become [this](https://www.youtube.com/watch?v=Vm4tx1O9GAc){:target="_blank"}.
 
 # Disclaimer

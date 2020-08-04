@@ -6,6 +6,7 @@ export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export CLYELL=/Users/odys/Github/clyell
 export DEV_UUID=b6811f2
+
 if [ -z "$1" ]; then 
     github=0
 elif [ $1 = 'push' ]; then
