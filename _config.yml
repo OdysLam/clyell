@@ -18,7 +18,7 @@ source_code:
 # Build settings
 markdown: kramdown
 permalink: /:title/
-exclude: ["balena_token", "deploy.sh", "README.MD"]
+exclude: ["balena_token", "deploy.sh", "README.MD", "deploy-local.sh", "manage.sh"]
 
 plugins:
      - jekyll-sitemap

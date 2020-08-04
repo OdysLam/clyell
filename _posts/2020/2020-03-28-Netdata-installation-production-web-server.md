@@ -65,7 +65,7 @@ Netdata uses internal and external plugins to collect data. Internal plugins run
 - **History:**
     - Period: 1 year
     - Granularity: (average)5min
-    - Data points: cpu, net traffic, ram (systemwide, per application)
+    - Data points: cpu, net traffic, ram (system-wide, per application)
 - **System:** Ubuntu 18.04.3 LTS
 - **VM:** Yes
 - **Applications:**
