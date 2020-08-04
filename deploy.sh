@@ -5,26 +5,28 @@
 export J_OUTPUT=/Users/odys/Github/odyslam.github.io/blog/
 export REPO=/Users/odys/Github/odyslam.github.io
 export DEV_UUID=b6811f2
-if [ $1 = 'push' ]; then
+if [ -z "$1" ]; then 
+    github=0
+elif [ $1 = 'push' ]; then
     echo "pushing chnanges to remote repository"
     git push 
+    github=1
 elif [ $1 = 'commit' ]; then
     echo "commiting and pushing changes to remote repository"
     git add -A && git commit --signoff -m "$2"
     git push
-elif [ -z "$1" ]; then 
-    github=0
+    github=1
 else 
     echo "Unknown command, aborting"
     exit 1
 fi
 if [ $? -eq 0 ]; then
-    echo "changed pushed to clyell repository"
+    continue
 else 
     echo "failed to push changes to clyell repository"
     exit 1
 fi
-if [[ github -ne 0 ]; then
+if [ $github -eq 1 ]; then
     bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
         cd $REPO
