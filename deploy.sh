@@ -1,3 +1,4 @@
+#!/bin/bash
 # This script is used to build the jekyll blog part of the website and update the git repository
 # It then logs me into balena (the webserver) in order to run manually another script which downloads the updated website to the server.
 
