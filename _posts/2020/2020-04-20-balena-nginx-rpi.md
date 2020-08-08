@@ -43,7 +43,7 @@ So, the website is not supported by a back-end web application, but it's only a 
 
 ## Webserver 
 
-In our case, to keep things as simple and **as lightweight** as possible, we will be serving a static website using a static webserver, **Nginx**. It is one of the oldest and most performant webservers, allowing us to serve up to 1000 users without our Raspberry breaking a sweat.
+In our case, to keep things as simple and **as lightweight** as possible, we will be serving a static website using a static webserver, **Nginx**. It is one of the oldest and most performing webservers, allowing us to serve up to 1000 users without our Raspberry breaking a sweat.
 
   
 
