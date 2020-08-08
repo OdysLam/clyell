@@ -94,7 +94,7 @@ Thus, startups have a different view on hiring, and you usually talk with the CE
 
 > What do you think of that X ? We have a product Y, do you have any idea on how to improve it? 
 
-This way, they understand more effectively (and qualitatively) your knowledge, intuition and "apatite" for challenges. Startups, due to their small size and small risk-tolerance (as far as hiring is concerned), prefer to have a more refined hiring process, which undeniably is hard to scale up without reducing its quality.
+This way, they understand more effectively (and qualitatively) your knowledge, intuition and "appetite" for challenges. Startups, due to their small size and small risk-tolerance (as far as hiring is concerned), prefer to have a more refined hiring process, which undeniably is hard to scale up without reducing its quality.
 
 In other words, it's not **that** important to refine your knowledge on a particular subject, but rather refine your professional profile, your mindset and mental models, the way you approach and solve problems. 
 
