@@ -23,9 +23,7 @@ else
     echo "Unknown command, aborting"
     exit 1
 fi
-if [ $? -eq 0 ]; then
-    continue
-else 
+if [ $? -neq 0 ]; then
     echo "failed to push changes to clyell repository"
     exit 1
 fi

@@ -38,7 +38,7 @@ Startups do not have a strict definition, but we generally refer to the companie
 
 In Greece, while there are high-tech companies that offer a modern work environment with a startup-like culture (e.g beat, efood, skroutz), we will focus on 2 other types of companies:
 - The companies that are located abroad Greece and hire remotely (e.g through [AngeLlist](https://angel.co/)). Ideally, we would like for them to be populated primarily by Greeks or at least have Greeks founders, as we tend to hire our own kin.
-- The companies that are located in Greece, but their market is primarily outside of Greece. In other words, they are located here because their founders happened to be located here. Usually these companies do their product development in Greece and they sell worldwide (e.g [Accusonus](https://accusonus.com/](https://accusonus.com/).
+- The companies that are located in Greece, but their market is primarily outside of Greece. In other words, they are located here because their founders happened to be located here. Usually these companies do their product development in Greece and they sell worldwide (e.g [Accusonus](https://accusonus.com/)).
 
 This way:
 - The market (non-greek) offers no real limitations to the company (thus the growth can be considerable)
