@@ -1,6 +1,6 @@
 # Site settings
 title: "blog.py"
-bye_message: "Love responsibility. Say: It is my duty, and mine alone, to save the earth. If it is not saved, then I alone am to blame."
+bye_message: "Love responsibility. Say: It is my duty, and mine alone, to save the earth. If it is not saved, then I alone am to blame. <br> - Nikos Kazantzakis, Ascetica   "
 url: "https://odyslam.me"
 disqus: odyslam-me
 baseurl: "/blog"
