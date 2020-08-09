@@ -10,7 +10,7 @@ tags:
     - self-improvement
     - career
     - english
-excerpt: "Why you should go after a startup as soon as you finish university"
+excerpt: "Why you should go after a startup as soon as you finish university. Part 1"
 image: https://i.imgur.com/OAeoTWb.png
 vertical: self-improvement
 ---
