@@ -34,7 +34,9 @@
     </div>
     <!--End mc_embed_signup-->
     <br>
+    {% if  page.is_post %}
     {% include disqus.html %}
+    {% endif %}
     <script id="dsq-count-scr" src="//odyslam-me.disqus.com/count.js" async></script>
   <div class="col-lg-8 col-lg-offset-2">
     <footer>
