@@ -10,10 +10,6 @@ export DEV_UUID=b6811f2
 
 if [ -z "$1" ]; then 
     github=0
-elif [ $1 = 'push' ]; then
-    echo "pushing chnanges to remote repository"
-    git push 
-    github=1
 elif [ $1 = 'commit' ]; then
     echo "commiting and pushing changes to remote repository"
     git add -A && git commit --signoff -m "$2"
