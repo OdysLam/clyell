@@ -14,5 +14,6 @@ Gemfile.lock
 deploy2.sh
 googlef4f5b90692e63106.html
 .DS_Store/
+.vscode/
 manage.sh
 balena_token
