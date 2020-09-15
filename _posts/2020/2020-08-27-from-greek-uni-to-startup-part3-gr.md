@@ -162,3 +162,5 @@ Image: We start as [this](https://www.youtube.com/watch?v=Otgm8oxEy_w){:target="
 
 Ευχαριστώ για την ανάγνωση.
 
+([Part 1](/blog/from-greek-uni-to-startup-gr), [Part 2](/blog/from-greek-uni-to-startup-part2-gr), [Part 3](/blog/from-greek-uni-to-startup-part3-gr), [Part 4](/blog/from-greek-uni-to-startup-part4-gr))
+

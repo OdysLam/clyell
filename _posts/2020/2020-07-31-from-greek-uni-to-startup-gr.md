@@ -189,3 +189,5 @@ My github Portfolio ☝️ (κάνε κλικ για να μεγαλώσει η 
 
 (Όλο το website, βρίσκεται [εδώ](https://imgur.com/gallery/iznOLOb))
 
+
+([Part 1](/blog/from-greek-uni-to-startup-gr), [Part 2](/blog/from-greek-uni-to-startup-part2-gr), [Part 3](/blog/from-greek-uni-to-startup-part3-gr), [Part 4](/blog/from-greek-uni-to-startup-part4-gr) )

@@ -92,10 +92,10 @@ Image: We start as [this](https://www.youtube.com/watch?v=Otgm8oxEy_w){:target="
 
 Στο σημερινό ποστ συζητήσαμε για την σημασία της δικτύωσης, τι διαφορά έχει με τον “γνωστό” και πως μπορούμε να το κάνουμε. Επίσης αναφέραμε κάποιες μικρές συμβουλές σχετικά με το βιογραφικό.
 
-Στο [Part 3](/blog/from-greek-uni-startup-part2-gr)), it’s story time 🙃! 
+Στο [Part 3](/blog/from-greek-uni-to-startup-part2-gr)), it’s story time 🙃! 
 
 Θα αναφέρω το δικό μου ταξίδι όπου έμαθα και αυτά που έχω αναφέρει μέχρι τώρα.
 
 Σας ευχαριστώ για την ανάγνωση.
 
-
+([Part 1](/blog/from-greek-uni-to-startup-gr), [Part 2](/blog/from-greek-uni-to-startup-part2-gr), [Part 3](/blog/from-greek-uni-to-startup-part3-gr), [Part 4](/blog/from-greek-uni-to-startup-part4-gr))
