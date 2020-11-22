@@ -43,15 +43,15 @@ In order to migrate, the good folks at Discourse, with the [help of the communit
 
 Although the process seemed to be easy, there are a few gotchas which I learned the hard way.
 
-1) You have to build Discourse from source. As it's a great piece of monolithic software on Ruby, it's not as trivial as one would have hoped. 
-    1) MacOS is not playing nice with Ruby, avoid to reduce unneeded complexity.
-    2) Go for Ubuntu and prepare to spend quite some time in order to setup everything.
-2) When dumping the MongoDB database, make sure you save everything on the correct directory. In case of a hosted NodeBB, make sure that you request the **entirety** of the dump. I spent quite some time trying to figure out why the migration did not work, partly because I requested half the dump.
-3) In case you encounter the ` don't know what to do with file, skipping` error, this means that you are using a newer version of mongorestore which has a slightly  different syntax.
-	1) Try `mongorestore -d <database_name> /directory`
-	2) This will restore the database in a newly created database called `<database_name>`.
-	3) Make sure you change the `nodebb.rb` line concerning the connection to the MongoDB to include the database you defined above: `@client = adapter.new('mongodb://127.0.0.1:27017/<database_name>'')`
-4) It is possible that there are some bad state in MongoDB which might break the migration script. Let's see an example of what I encountered in the following section.
+1. You have to build Discourse from source. As it's a great piece of monolithic software on Ruby, it's not as trivial as one would have hoped. 
+    1. MacOS is not playing nice with Ruby, avoid to reduce unneeded complexity.
+    2. Go for Ubuntu and prepare to spend quite some time in order to setup everything.
+2. When dumping the MongoDB database, make sure you save everything on the correct directory. In case of a hosted NodeBB, make sure that you request the **entirety** of the dump. I spent quite some time trying to figure out why the migration did not work, partly because I requested half the dump.
+3. In case you encounter the ` don't know what to do with file, skipping` error, this means that you are using a newer version of mongorestore which has a slightly  different syntax.
+	1. Try `mongorestore -d <database_name> /directory`
+	2. This will restore the database in a newly created database called `<database_name>`.
+	3. Make sure you change the `nodebb.rb` line concerning the connection to the MongoDB to include the database you defined above: `@client = adapter.new('mongodb://127.0.0.1:27017/<database_name>'')`
+4. It is possible that there are some bad state in MongoDB which might break the migration script. Let's see an example of what I encountered in the following section.
 
 ## The culprit is 3.14
 
