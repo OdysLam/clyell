@@ -8,6 +8,43 @@ export REPO=/Users/odys/Github/odyslam.github.io
 export CLYELL=/Users/odys/Github/clyell
 export DEV_UUID=b6811f2
 
+function get_devrel_resources() {
+    rm -rf $CLYELL/devrel-resources-main
+    wget https://github.com/OdysLam/devrel-resources/archive/main.zip -O $CLYELL/main.zip
+    unzip -q $CLYELL/main.zip
+    rm $CLYELL/main.zip
+    cat > $CLYELL/devrel-resources-main/index.md <<- EOM
+---
+layout: post
+title:	"Developer Relations Resources"
+author: "Odysseas Lamtzidis"
+tags:
+    - "developer relations"
+    - "2020"
+excerpt: "Curated list of Resources for Developer Relations"
+vertical: developer-relations
+---
+EOM
+cat $CLYELL/devrel-resources-main/README.md >> $CLYELL/devrel-resources-main/index.md
+
+cat > $CLYELL/devrel-resources-main/discourse-guide.md <<- EOM
+---
+layout: post
+title:	"Discourse Guide"
+author: "Odysseas Lamtzidis"
+tags:
+    - "developer relations"
+    - "2020"
+    - "Discourse"
+    - "Community Management"
+excerpt: "An all encompasing one-stop guide to launch a succesful Discourse forum"
+vertical: developer-relations
+---
+EOM
+cat $CLYELL/devrel-resources-main/discourse.md >> $CLYELL/devrel-resources-main/discourse-guide.md
+rm $CLYELL/devrel-resources-main/discourse.md && rm $CLYELL/devrel-resources-main/README.md
+}
+
 if [ -z "$1" ]; then 
     github=0
 elif [ $1 = 'commit' ]; then
@@ -24,6 +61,7 @@ if [ $? -neq 0 ]; then
     exit 1
 fi
 if [ $github -eq 1 ]; then
+    get_devrel_resources
     bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
         cd $REPO
