@@ -61,7 +61,7 @@ if [ $? -neq 0 ]; then
     exit 1
 fi
 if [ $github -eq 1 ]; then
-    get_devrel_resources
+    # get_devrel_resources
     bundle exec jekyll build -d $J_OUTPUT
     if [ $? -eq 0 ]; then
         cd $REPO
