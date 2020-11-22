@@ -42,7 +42,7 @@ vertical: developer-relations
 ---
 EOM
 cat $CLYELL/devrel-resources-main/discourse.md >> $CLYELL/devrel-resources-main/discourse-guide.md
-rm $CLYELL/devrel-resources-main/discourse.md && rm $CLYELL/devrel-resources-main/README.md
+rm $CLYELL/devrel-resources-main/discourse.md && rm $CLYELL/devrel-resources-main/README.md && rm $CLYELL/devrel-resources-main/LICENSE
 }
 
 if [ -z "$1" ]; then 
