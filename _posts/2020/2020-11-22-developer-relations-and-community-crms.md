@@ -1,6 +1,6 @@
 ---
 layout: post
-title:	Developer Relations and Community CRMs"
+title:	Developer Relations and Community CRMs
 date: 2020-09-15
 author: "Odysseas Lamtzidis"
 tags:
