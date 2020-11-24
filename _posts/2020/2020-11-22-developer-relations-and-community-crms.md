@@ -37,8 +37,7 @@ Netdata started in 2016 as an open-source project and immediately joined the hyp
 1) The community mainly runs on GitHub (for now, more on that later), thus we need a tool to help us analyze the health there.
 2) We just shipped our new forums, which will be the center of the community from now on. 
 3) Engineers and thought leaders interact on twitter as well, thus we need to be able to analyze the interactions there as well. This is not a hard requirement, since our marketing handles the twitter account.
-4) It's a one-man-band type of thing, thus we need something easy to setup, so we can initially focus on customer-facing activities and setting up the program.
-
+4) Currently I am leading a team of 1 in Developer Relations, thus we need something easy to setup, so we can initially focus on customer-facing activities and setting up the program.
 
 # The suitors
 
@@ -66,24 +65,24 @@ Up to this point, I have used both tools, in parallel, since they are quite comp
 
 I would imagine, that come billing time, we will have to make a choice, but for the near future, I intend to use both, depending on the kind of report or decision that I want to make.
 
-In broad terms, Orbit.love and Savannah, although they seem similar, and for sure they share a large part of their functionality, they seem to have a different focus.
+In broad terms, Orbit and Savannah, although they seem similar, and for sure they share a large part of their functionality, they seem to have a different focus.
 
-Savannah is mainly focused on the inside, the internal community  and how members interact in it. Orbit.love on the other hand, is also interested in the activities of the community members outside of the community.
+Savannah is mainly focused on the inside, the internal community  and how members interact in it. Orbit on the other hand, is also interested in the activities of the community members outside of the community.
 
-## Orbit.love
-[Orbit.love](https://orbit.love/) is actually an implementation of the eponymous community model that was pioneered by one of the co-founders, [Josh Dzielak ](https://dzello.com/about/during) his time as VP of engineering in Keen.io and then when leading Developer relations at Algolia. It is a venture-backed startup, currently with only 3 people and they are rapidly implementing new features and integrations. Moreover, they have a very active slack channel where users offer feedback and chat with the developers.
+## Orbit
+[Orbit](https://orbit.love/) is actually an implementation of the eponymous community model that was pioneered by one of the co-founders, [Josh Dzielak ](https://dzello.com/about/during) his time as VP of engineering in Keen.io and then when leading Developer relations at Algolia. It is a venture-backed startup, currently with only 3 people and they are rapidly implementing new features and integrations. Moreover, they have a very active slack channel where users offer feedback and chat with the developers.
 
 The project was open-sourced in 2019 and anyone can find the model and contribute on [GitHub](https://github.com/orbit-love/orbit-model). Although we are not going to talk about the model itself, it's worth mentioning that it diverges from the usual AAARRRP funnel. You can read more about their differences on [GitHub](https://github.com/orbit-love/orbit-model#orbit-and-funnel).
 
 The product is based on the concept of feed, for both the entire community and on a per-member basis. You can see a live feed of all the activities that members do inside the community, activities which of-course depend on the data sources that you have added.
 
-![](https://i.imgur.com/4kK2WWN.png)
+![](https://i.imgur.com/eduh4aM.png)
 
 This is especially useful on a per-member basis, since it allows you to take optimal tactical decisions when interacting with that particular community member. For example, you can welcome them to the community, you can congratulate them for their first contribution or see that they have interacted a lot of times, thus you want to chat with them about your beta-testing program.
 
 ![](https://orbit.love/assets/images/hero-screenshot.png)
 
-What I particularly like about Orbit.love is that it has this **twitter integration**, thus it can correlate different accounts from GitHub and Twitter that belong to the same person. This is powerful, because it allows you to find influencers if they have interacted with both accounts with your community (e.g a RT and a GitHub issue) or if they have added their twitter account on the GitHub profile.
+What I particularly like about Orbit is that it has this **twitter integration**, thus it can correlate different accounts from GitHub and Twitter that belong to the same person. This is powerful, because it allows you to find influencers if they have interacted with both accounts with your community (e.g a RT and a GitHub issue) or if they have added their twitter account on the GitHub profile.
 
 Orbit cares a lot about the reach of the members, measuring their reach both in terms of twitter and in terms of GitHub followers, stars in projects, etc. On top of that, Orbit tries to gather information about their profile from the GitHub activity (e.g what languages does the user usually uses in projects/contributions).
 
@@ -187,24 +186,25 @@ For example, in my twitter community, there is a member which is depicted as `Or
 
 Thus, I would probably reduce the impact a tweet can have in considering a user part of my community. Although I am sure that there is a rationale behind the point system, which might be appropriate for more cases, offering the choice seems like a low-hanging fruit.
 
-You can join the beta-testing and the slack channel, by visiting [Orbit.love](https://orbit.love).
+You can join the beta-testing and the slack channel, by visiting [Orbit](https://orbit.love).
 
 ### Data sources
-- Discourse
-- Twitter
-- GitHub
-- [API integration](https://docs.savannahhq.com/api/)
+- [Discourse](https://docs.orbit.love/docs/setup-the-orbit-discourse-integration)
+- [Twitter](https://docs.orbit.love/docs/setup-the-twitter-integration)
+- [GitHub](https://docs.orbit.love/docs/how-to-setup-the-orbit-github-integration)
+- [Zapier](https://zapier.com/apps/orbit/integrations)
+- [API integration](https://docs.orbit.love/reference)
 
 
 ## Savannah
 
 Savannah is the brainchild of [Michael Hall](https://www.linkedin.com/in/mhall119/, Senior Community Manager at InfluxDB. I met Michael, during his time in the Linux Foundation, when I was an active member of the EdgeX Foundry community in my IoT years.
 
-I met Michael again in the DevRel collective slack and he was kind enough to invite me for a closed beta of SavannahHQ, a community CRM for Developer Advocates, by a Developer Advocate.
+I met Michael again in the [DevRel collective](https://devrelcollective.fun/) slack and he was kind enough to invite me for a closed beta of SavannahHQ, a community CRM for Developer Advocates, by a Developer Advocate.
 
 Savannah offers a great aggregate view of the various aspects of my community, integrating the Graphs inside the dashboard (in contrast with Orbit which are isolated). For some reason, this offers a greater user experience, with the product feeling much more coherent.
 
-For example, taking the contributions example from orbit, in Savannah I can view the number of total contributions for the period and then a contribution-by-channel pie chart. 
+For example, taking the contributions example from Orbit, in Savannah I can view the number of total contributions for the period and then a contribution-by-channel pie chart. 
 
 ![Savannah Contributions](https://i.imgur.com/ZHsER8t.png)
 
@@ -252,7 +252,7 @@ You can join the beta-testing, learn more about the product and join the slack i
 
 At this point, I have yet to make a final decision on which tool is more appropriate for my needs.
 
-I have concluded to use Savannah for more aggregate understanding of my community, being able to quickly see who are my latest contributors or the most active in conversations. Moreover, the network graph is a great tool to see how the community is evolving and to spot community members which start to become more active, get more connections and becoming a link for the community.
+I have concluded to use Savannah for more aggregate understanding of my community, being able to quickly see who are my latest contributors or the most active in conversations. Moreover, the network graph is a great tool to see how the community is evolving and to spot community members which start to become more active, get more connections and becoming a link for the community. Finally, the keyword tag of conversations is a nice little feature, as it gives me a gist of the conversations that are happening, in broad terms of-course.
 
 On the other hand, I use Orbit to get a live understanding of my community, see the newest contributors and make sure to welcome them to the community and thank them for their contributions. Moreover, being able to monitor twitter is a great aspect, as I can see the *high reach* individuals that interact with Netdata and keep an eye on them, without having to use yet another service/platform. Finally, the reports offer a great detailed view of the community as a whole and being able to quickly benchmark the current period of the last one, is a great asset.
 
