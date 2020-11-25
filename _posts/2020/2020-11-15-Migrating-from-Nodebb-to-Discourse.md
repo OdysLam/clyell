@@ -16,6 +16,12 @@ vertical: developer-relations
 
 # Migrating from Nodebb to Discourse
 
+In this blog post I note some interesting things that I discovered during the migration of the [Netdata Community](https://community.netdata.cloud) from Nodebb to Discourse. I encountered an interesting bug and I had to deviate a bit from the ["official" instructions](https://meta.discourse.org/t/importing-nodebb-mongodb-to-discourse/126553/11), thus I thought it would be interesting to write some notes and share them.
+
+
+
+Random stranger in the internet, I hope that this blog post saves you some time.
+
 # Some background
 
 When I joined Netdata in early August, we had just released our forum, based on Nodebb.
@@ -32,9 +38,9 @@ The reason we chose to move out of Nodebb is that although the project is awesom
 
 In other words, in order to bring the forums up to shape, there is more manual work and maintenance required in Nodebb than in Discourse. Which would have been great, since the choice of customization is really wonderful, but I am the only Developer Relations team member at the moment. Thus whatever development I need, I will do it myself, limiting considerably the time I can invest.
 
-Moreover, as I have now spent considerable time in Discourse, while I do prefer some elements of NodeBB, such as the technology stack or the plugin system, Discourse as a whole offers much more control and options. It's simply more mature.
+Moreover, as I have now spent considerable time in Discourse, while I do prefer some elements of NodeBB, such as the technology stack or the plugin system; Discourse as a whole offers much more control and options.** It's simply more mature.**
 
-All in all, there is a reason while the grand majority of forums look identical nowadays, and the reason is that Discourse is hard to beat. (Although there are a couple of interesting options, maybe in another blog post)
+All in all, there is a reason while the grand majority of forums look identical nowadays, and the reason is that Discourse is hard to beat. (Although there are a couple of interesting options oriented more for SaaS  products, maybe in another blog post)
 
 ## The migration
 
@@ -75,13 +81,17 @@ But, even with finding the culprit, the bad states had been created inside the d
 
 When I tried to test the migration, the script was unable to perform the migration and would crash, consistently and without giving much information. With the help of some debugging "print" statements that I put in the script, I found that the script would crash in area of topics import. 
 
-At first, it fetches a list of topics, then it starts pulling each topic from the database, and for each topic it pulls all it's posts. It's simple really. The script would crash when it it tried to pull the post of a particular topic, the one with the `raspberry pi` keyword in it's title. 
+At first, it fetches a list of topics, then it starts pulling each topic from the database, and for each topic it pulls all it's posts. 
 
-When I tried to fetch the topic from the database, using MongoCLI, I was successful, but when I tried to fetch the first post, I couldn't.
+It's simple really.
 
-Bingo!
+But, to my disappointment, the script would crash when it it tried to pull the post of a particular topic, the one with the `raspberry pi` keyword in it's title. 
 
-Apparently, for the `Raspberry pi` topics, while the topic existed, the post did not, resulting in a `nul` return for `post_id` and the crashing of the whole script. In Nodebb, the `post_id` of the first post of a topic, is the `mainPID`.
+When I tried to fetch the topic from the database, using MongoCLI, I was successful, but when I tried to fetch the first post of that particular topic, I couldn't.
+
+**Bingo!**
+
+Apparently, for the `Raspberry pi` topics, while the topic existed, the post did not, resulting in a `null` return for `post_id` and the crashing of the whole script. In Nodebb, the `post_id` of the first post of a topic, is the `mainPID`.
 
 Here is the data structure of the bad topic:
 ```JSON
@@ -110,10 +120,10 @@ Here is the data structure of the bad topic:
 Now that I knew the exact problem, I had to think of a quick solution. 
 
 Here is the function in `mongo.rb` that fetches the list of topics from MongoDB.
+
 ```ruby
 def topics(offset = 0, page_size = 2000)
       topic_keys = mongo.find(_key: 'topics:tid').skip(offset).limit(page_size).pluck(:value)
-
       topic_keys.map { |topic_key| topic(topic_key) }
     end
 ```
