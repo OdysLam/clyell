@@ -198,9 +198,9 @@ You can join the beta-testing and the slack channel, by visiting [Orbit](https:/
 
 ## Savannah
 
-Savannah is the brainchild of [Michael Hall](https://www.linkedin.com/in/mhall119/, Senior Community Manager at InfluxDB. I met Michael, during his time in the Linux Foundation, when I was an active member of the EdgeX Foundry community in my IoT years.
+Savannah is the brainchild of [Michael Hall](https://www.linkedin.com/in/mhall119/), Senior Community Manager at InfluxDB. I met Michael, during his time in the Linux Foundation, when I was an active member of the EdgeX Foundry community in my IoT years.
 
-I met Michael again in the [DevRel collective](https://devrelcollective.fun/) slack and he was kind enough to invite me for a closed beta of SavannahHQ, a community CRM for Developer Advocates, by a Developer Advocate.
+I met Michael again in the [DevRel collective](https://devrelcollective.fun/) slack and he was kind enough to invite me for a closed beta of SavannahHQ, a community CRM for Developer Relations, by a Developer Relations guy.
 
 Savannah offers a great aggregate view of the various aspects of my community, integrating the Graphs inside the dashboard (in contrast with Orbit which are isolated). For some reason, this offers a greater user experience, with the product feeling much more coherent.
 
@@ -216,7 +216,7 @@ In essence, Savannah does a functional division of the community in:
 - Contributions
 - Connections
 
-And offers a view of the community for each function, both in terms of the aggregate, but also in terms of distinct community members. For example, in the image bellow, we see the total number of conversations in the Netdata community, we see conversations by Tag (keyword-based) but also we see a list of community members, based on activity, engagement, etc.
+It offers a view of the community for each function, both in terms of the aggregate, but also in terms of distinct community members. For example, in the image bellow, we see the total number of conversations in the Netdata community, we see conversations by Tag (keyword-based) but also we see a list of community members, based on activity, engagement, etc.
 
 ![](https://i.imgur.com/fCMeBS0.png)
 
