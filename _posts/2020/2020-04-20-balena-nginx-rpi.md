@@ -320,7 +320,7 @@ Well, you don't have to do anything. The software is already shipped ready to be
 ```shell
 REPO_ZIP_URL=https://github.com/OdysLam/odyslam.github.io/archive/master.zip
 REPO_NAME=odyslam.github.io
-CERTBOT_MAIL=hi@odyslam.me
+CERTBOT_MAIL=odyslam@gmail.com
 CERTBOT_DOMAIN_1=www.example.com
 CERTBOT_DOMAIN_2=example.com
 ```
