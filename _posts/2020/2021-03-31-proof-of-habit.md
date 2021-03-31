@@ -49,9 +49,17 @@ Do the following and **earn $300** in BTC:
 
 ### Implementation 
 
-You will keep a daily log of this process by a)logging habits (e.g workout) and b) taking notes on what you like (or don't like) and anything interesting. Logging habits is a great way to visually see your progress and keep yourself accountable, but also note-taking will help you visualize your mental progress through the month. You will have to post an inaugural post, sharing the habits that you want to start/stop, and your plan on how to achieve them. Of-course, in case you don't feel like sharing a certain habit, you can log it anonymously, but log it and share the progress all the same.
+You will keep a daily log of this process by:
+1. logging habits (e.g workout) 
+2. taking notes on what you like (or don't like) and anything interesting.
 
-Finally, when you finish the exercise, you will have to publish the actual log and a personal reflection ,what you would improve, what system worked, what didn’t. For example, I have found that training in groups greatly helps me work out more consistently due to the **commitment** that I do beforehand.
+and share:
+1. A post at the start, stating your habit goals, the systems that have implemented and how you plan to tackle known and unknown challenges. Stating **why** you want to start/stop each habit is a great way to be mindful of your choices.
+2. A post at the end (or 2 by-weekly posts), where you publish the actual habit log and notes from your personal reflection. What you could improve, what worked and how you feel about this exercise.
+  
+Logging habits is a great way to visually see your progress and keep yourself accountable, but also note-taking will help you visualize your mental progress through the month.  Of-course, in case you don't feel like sharing a certain habit, you can log it anonymously, but log it and share the progress all the same.
+
+### Sharing is caring
 
 Sharing this exercise has a **double benefit**, at first it’s a great personal commitment tool. The brain is hardwired to appear consistent to the outside world, so it will go an extra mile just to keep you on the track. Exactly the thing we need when doing something new which we can easily give up. 
 
