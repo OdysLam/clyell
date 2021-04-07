@@ -8,7 +8,7 @@ tags:
     - "developer-relations"
     - "tutorial"
 excerpt: "Migrating a live forum from Nodebb to Discourse"
-image: https://i.imgur.com/hWeP9ld.png
+image: http://i.imgur.com/hWeP9ld.png
 vertical: developer-relations
 ---
 
