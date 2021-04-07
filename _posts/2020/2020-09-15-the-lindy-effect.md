@@ -7,7 +7,6 @@ author: "Odysseas Lamtzidis"
 #     - blog
 tags:
     - "2020"
-    - "english"
     - "decision-making"
 excerpt: "Lindy, a timeless empirical guide"
 image: https://i.imgur.com/0WFM8IA.jpg
