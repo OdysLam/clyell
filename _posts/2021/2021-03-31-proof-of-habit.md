@@ -13,7 +13,7 @@ image: https://i.imgur.com/FpYeNgV.png
 
 ## Disclaimer
 
-This post was a response to this [call](https://1729.com/decentralized-task-creation/) for creating tasks. The idea is to create positive tasks for people and reward crypto. 
+(DRAFT/DISCLAIMER — This post is a submission to a competition on 1729.com. No prizes will be awarded for any submissions at this time. Learn more at 1729.com/decentralized-task-creation.)
 
 ## Habits
 
