@@ -12,7 +12,7 @@ image: https://cdn.mos.cms.futurecdn.net/4b711fa900291f491b0bdbb79f37342d.jpg
 vertical: futurism
 ---
 
-![](https://cdn.mos.cms.futurecdn.net/4b711fa900291f491b0bdbb79f37342d.jpg)
+![cloud city by bioshock](https://cdn.mos.cms.futurecdn.net/4b711fa900291f491b0bdbb79f37342d.jpg)
 Cloud City from [Bioshock Infinite](https://bioshock.fandom.com/wiki/Columbia)
 
 [Balaji Srivansan](https://balajis.com/about/), a prominent figure in the blockchain space and one of the few to correctly predict (unfortunately) the sheer size and results of the COVID-19 pandemic, has been talking about the Network State for quite some time. 
