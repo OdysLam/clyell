@@ -23,8 +23,6 @@ This is an index of all the blog posts that talk about the book "What is Philoso
   - [Review post](/blog/what-is-philosophy-chapter-1)
   - [Interesting concepts, Important Questions](#chapter-1)
 
-
-
 ## Chapter 1 
 
 ### Interesting concepts

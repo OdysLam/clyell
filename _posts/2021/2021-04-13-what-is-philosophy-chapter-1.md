@@ -51,3 +51,5 @@ Of course, this whole discourse has value really should we agree that the man is
 We end this chapter with an enigmatic observation by Ortega, that the 19th century had been a time very negative for philosophy, which was bent to an absolute minimum in the minds of people. If it could be abolished, he says, it would have happened.
 
 Let's see why on the following chapter.
+
+> In the [index page](2021-04-13-what-is-philosophy-index.md) for "what is philosophy" you can find the concepts and questions that stood out for me. You can also find a list of people and works that are mentioned in the chapter. 
