@@ -64,3 +64,9 @@ I am a strong believer in "[Ubuntu](https://www.ttbook.org/interview/i-am-becaus
 History has shown, I think, that less deviation from the average produces a more high-quality standard of living for the community as a whole.
 
 Finally, the nation-state, let's say Greece, has invested considerably in me in various ways. From the most obvious, as having "free" education and "free" healthcare, to the non-obvious, by providing a safe and organized society, parks to play on, roads to drive in, etc. I am not sure how ethical it would be of me, to simply say that since I don't identify that much as Greek, but rather a citizen of the world, I will stop paying my fair due to the state and simply move on. In other words, I am not sure if I have paid back all the things that modern Greek society and it's organized form, the Government, has offered me thus far. 
+
+## External Resources
+
+If you want to read more about this concept, here are a couple of resources:
+- [Charter Cities Podcast Episode 15: A City in the Cloud with Balaji Srinivasan](https://www.chartercitiesinstitute.org/post/charter-cities-podcast-episode-15-a-city-in-the-cloud-with-balaji-srinivasan)
+- [Balaji Srinivasan on The Future of Bitcoin and Ethereum, How to Become Noncancelable, the Path to Personal Freedom and Wealth in a New World, the Changing Landscape of Warfare, and More](https://tim.blog/2021/03/24/balaji-srinivasan/)
