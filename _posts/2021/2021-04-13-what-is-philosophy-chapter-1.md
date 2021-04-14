@@ -52,4 +52,4 @@ We end this chapter with an enigmatic observation by Ortega, that the 19th centu
 
 Let's see why on the following chapter.
 
-> In the [index page](2021-04-13-what-is-philosophy-index.md) for "what is philosophy" you can find the concepts and questions that stood out for me. You can also find a list of people and works that are mentioned in the chapter. 
+> In the [index page](what-is-philosophy-index) for "what is philosophy" you can find the concepts and questions that stood out for me. You can also find a list of people and works that are mentioned in the chapter. 
